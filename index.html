@@ -447,7 +447,7 @@
         <span>Natija bo‘lmasa — <b>pul 100% qaytadi</b></span>
       </div>
 
-      <a class="cta" id="main-cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20aleykum%2C%20men%20Saraaa%20dagi%20399.000%20so'mlik%20olmoqchi%20edim">
+      <a class="cta" id="main-cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20alaykum!%20%F0%9F%91%8B%0ASaytdan%20yozyapman%20%E2%80%94%20Sara%20box%20%2B%20umrbod%20ilovani%20399%20000%20so%E2%80%98mga%20band%20qilmoqchiman.%0ATo%E2%80%98lov%20va%20yetkazib%20berish%20qanday%20bo%E2%80%98ladi%3F%0A%0APromo%20kod%3A%20SARA399">
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.29c-.26.26-.48.48-.99.48l.35-5.02 9.14-8.26c.4-.35-.09-.55-.62-.2L6.17 13.2 1.3 11.68c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
         Telegram’da band qilish
       </a>
@@ -528,7 +528,7 @@
         <li>Pul qaytarish kafolati</li>
       </ul>
       <p class="final-left">Atigi <b data-spots>17</b> ta joy qoldi</p>
-      <a class="cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20aleykum%2C%20men%20Saraaa%20dagi%20399.000%20so'mlik%20olmoqchi%20edim">
+      <a class="cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20alaykum!%20%F0%9F%91%8B%0ASaytdan%20yozyapman%20%E2%80%94%20Sara%20box%20%2B%20umrbod%20ilovani%20399%20000%20so%E2%80%98mga%20band%20qilmoqchiman.%0ATo%E2%80%98lov%20va%20yetkazib%20berish%20qanday%20bo%E2%80%98ladi%3F%0A%0APromo%20kod%3A%20SARA399">
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.29c-.26.26-.48.48-.99.48l.35-5.02 9.14-8.26c.4-.35-.09-.55-.62-.2L6.17 13.2 1.3 11.68c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
         Telegram’da band qilish
       </a>
@@ -543,7 +543,7 @@
       <b data-spots>17</b> ta joy qoldi
       <small>399 000 so‘m · −50%</small>
     </div>
-    <a class="cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20aleykum%2C%20men%20Saraaa%20dagi%20399.000%20so'mlik%20olmoqchi%20edim">
+    <a class="cta" data-tg href="https://t.me/saraaafit?text=Assalomu%20alaykum!%20%F0%9F%91%8B%0ASaytdan%20yozyapman%20%E2%80%94%20Sara%20box%20%2B%20umrbod%20ilovani%20399%20000%20so%E2%80%98mga%20band%20qilmoqchiman.%0ATo%E2%80%98lov%20va%20yetkazib%20berish%20qanday%20bo%E2%80%98ladi%3F%0A%0APromo%20kod%3A%20SARA399">
       <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.94 4.3 18.7 19.6c-.24 1.08-.88 1.35-1.79.84l-4.94-3.64-2.38 2.29c-.26.26-.48.48-.99.48l.35-5.02 9.14-8.26c.4-.35-.09-.55-.62-.2L6.17 13.2 1.3 11.68c-1.06-.33-1.08-1.06.22-1.57L20.55 2.8c.88-.33 1.65.2 1.39 1.5z"/></svg>
       Yozish
     </a>
@@ -556,7 +556,12 @@
       // ─── Sozlamalar — shu yerdan o‘zgartiring ───
       var CONFIG = {
         telegram: 'saraaafit',
-        message: "Assalomu aleykum, men Saraaa dagi 399.000 so'mlik olmoqchi edim",
+        // Telegram’da tayyor turadigan xabar. {code} o‘rniga promo kod qo‘yiladi.
+        message: 'Assalomu alaykum! 👋\n' +
+                 'Saytdan yozyapman — Sara box + umrbod ilovani 399 000 so‘mga band qilmoqchiman.\n' +
+                 'To‘lov va yetkazib berish qanday bo‘ladi?\n\n' +
+                 'Promo kod: {code}',
+        promoCode: 'SARA399',     // reklama havolasiga ?ad=reel1 qo‘shsangiz → SARA399-REEL1
         totalSpots: 30,
         startSpots: 17,           // sahifa ochilganda ko‘rinadigan qolgan joylar
         minSpots: 3,              // hisoblagich shu raqamdan pastga tushmaydi
@@ -565,7 +570,17 @@
         metaPixelId: ''           // masalan '1234567890' — Meta Events Manager’dan
       };
 
-      var tgUrl = 'https://t.me/' + CONFIG.telegram + '?text=' + encodeURIComponent(CONFIG.message);
+      // Qaysi reklamadan kelganini bilish uchun: ?ad=... yoki utm_content=... promo kodga qo‘shiladi
+      function promoCode() {
+        var tag = '';
+        try {
+          var q = new URLSearchParams(window.location.search);
+          tag = (q.get('ad') || q.get('utm_content') || '').toUpperCase().replace(/[^A-Z0-9_-]/g, '').slice(0, 16);
+        } catch (_) {}
+        return CONFIG.promoCode + (tag ? '-' + tag : '');
+      }
+      var message = CONFIG.message.replace('{code}', promoCode());
+      var tgUrl = 'https://t.me/' + CONFIG.telegram + '?text=' + encodeURIComponent(message);
       var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // ─── Meta Pixel (ID kiritilgandagina yuklanadi) ───
@@ -591,7 +606,7 @@
 
       // ─── Telegram tugmalari ───
       function copyMessage() {
-        try { navigator.clipboard.writeText(CONFIG.message).catch(function () {}); } catch (_) {}
+        try { navigator.clipboard.writeText(message).catch(function () {}); } catch (_) {}
       }
       document.querySelectorAll('[data-tg]').forEach(function (a) {
         a.href = tgUrl;
